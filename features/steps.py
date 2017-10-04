@@ -9,6 +9,11 @@ from lettuce import step, world
 from edad import Edad
 
 #Mumm-Ra
+
+@step(u'cuando realizo la operacion entonces')
+def cuando_realizo_la_operacion_entonces(step):
+    pass
+
 @step(u'Dado que ingreso la edad "([^"]*)"')
 def dado_que_ingreso_la_edad_group1(step, edad):
     world.edad = Edad()
