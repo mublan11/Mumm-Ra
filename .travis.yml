@@ -1,0 +1,15 @@
+language: python
+python:
+  - "2.7"
+
+install: 
+  "pip install -r requerimientos.txt"
+
+before_script: 
+  - autopep8 -ir *
+  - flake8 --max-complexity=10 --exclude=*.txt,*.md,*.pyc *
+
+script: 
+   - python TestEdad.py
+   - coverage run --branch TestEdad.py -v
+   - lettuce
