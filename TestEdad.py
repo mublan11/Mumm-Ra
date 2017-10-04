@@ -52,11 +52,11 @@ class EdadTest(unittest.TestCase):
         self.edad.calcularEdad(314)
         self.assertEquals(self.edad.obtener_resultado(), 'Eres Chabelo')
 
-    def test_eres_chabelo(self):
+    def test_no_se_permiten_letras(self):
         self.edad.calcularEdad('V')
         self.assertEquals(self.edad.obtener_resultado(), 'No se permiten letras')
 
-    def test_eres_chabelo(self):
+    def test_no_se_permiten_decimales(self):
         self.edad.calcularEdad(11.11)
         self.assertEquals(self.edad.obtener_resultado(), 'No se permiten decimales')
 
